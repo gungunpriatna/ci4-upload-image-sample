@@ -38,6 +38,8 @@ $routes->set404Override();
 $routes->get('/', 'ImageController::index');
 $routes->group('image', function($routes) {
     $routes->get('/', 'ImageController::index');
+    $routes->get('create', 'ImageController::create'); //tambahkan kode ini
+    $routes->post('/', 'ImageController::store'); //tambahkan kode ini
 });
 
 /*
